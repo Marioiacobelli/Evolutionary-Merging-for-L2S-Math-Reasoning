@@ -1,7 +1,7 @@
 # Evolutionary-Merging for L2S Math Reasoning
 
 Project for **Deep Learning and Applied AI 2024/2025 (Sapienza University of Rome)**.  
-We explore **evolutionary model merging** (via [Mergenetic](https://arxiv.org/abs/2505.11427)) we to combine:
+We explore **evolutionary model merging** (via [Mergenetic](https://arxiv.org/abs/2505.11427)) to combine:
 - **DeepSeek-R1-Distill-Qwen** (slow-thinking, accurate Chain-of-Thought model),
 - **Qwen2.5-Math** (fast-thinking, concise direct-answer model),
 
