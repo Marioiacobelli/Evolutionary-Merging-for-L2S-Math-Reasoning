@@ -92,14 +92,15 @@ You can either run **scripts end-to-end** or follow the **notebooks** for step-b
 
 ### 1. Merging (Task Arithmetic / TIES)
 
-From `mergenetic/`:
+From `mergenetic/`: \
+
 **Task Arithmetic (TA)**
 ```bash
-python mergenetic/scripts/mergenetic_gsm8k_TA.py 
+python /scripts/mergenetic_gsm8k_TA.py 
 ```
 **TIES**
 ```bash
-python mergenetic/scripts/mergenetic_gsm8k_TIES.py
+python /scripts/mergenetic_gsm8k_TIES.py
 ```
 ### 2. Evaluation
 
