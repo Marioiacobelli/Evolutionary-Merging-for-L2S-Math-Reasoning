@@ -15,6 +15,7 @@ to improve the trade-off between **accuracy** and **response length** in **Long-
 Evolutionary-Merging for L2S Math Reasoning
 |
 ├── project_notebook.ipynb                  # step-by-step merge + evaluation
+├── project_report.pdf                      # Report 
 ├── images/                                 # figures for the report
 ├── Qwen2.5-Math/                           # evaluation framework
 │   ├── README.md
