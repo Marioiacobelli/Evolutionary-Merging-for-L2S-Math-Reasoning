@@ -1,4 +1,4 @@
-# LLMs Evolutionary Merging for L2S Math Reasoning
+# Evolutionary-Merging for L2S Math Reasoning
 
 Project for **Deep Learning and Applied AI 2024/2025 (Sapienza University of Rome)**.  
 We explore **evolutionary model merging** (via [Mergenetic](https://arxiv.org/abs/2505.11427)) we to combine:
@@ -12,7 +12,7 @@ to improve the trade-off between **accuracy** and **response length** in **Long-
 ## 📂 Repository Structure
 
 ```
-LLMs Evolutionary Merging for L2S Math Reasoning
+Evolutionary-Merging for L2S Math Reasoning
 |
 ├── project_notebook.ipynb                   # step-by-step execution for merge and evaluation 
 |
