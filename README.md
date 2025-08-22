@@ -14,41 +14,33 @@ to improve the trade-off between **accuracy** and **response length** in **Long-
 ```
 Evolutionary-Merging for L2S Math Reasoning
 |
-├── project_notebook.ipynb                   # step-by-step execution for merge and evaluation 
-|
-├── images/                                  # Figures for report
-│
-├── Qwen2.5-Math/                            # Evaluation framework directory
+├── project_notebook.ipynb                  # step-by-step merge + evaluation
+├── images/                                 # figures for the report
+├── Qwen2.5-Math/                           # evaluation framework
 │   ├── README.md
 │   └── evaluation/
-│       ├── math_eval.py                     # Core evaluation function
-│       ├── compute_NTR.py                   # Negative Transfer analysis
-│       ├── generate_score_tensors.py        # Generate binary tensor for each benchmatk: 1=correct, 0=wrong answer
-│       ├── extract_result.py                # Extract results from json/jsonl output files
+│       ├── math_eval.py                    # core evaluation
+│       ├── compute_NTR.py                  # negative transfer analysis
+│       ├── generate_score_tensors.py       # build 0/1 correctness tensors
+│       ├── extract_result.py               # parse json/jsonl outputs
 │       ├── sh/
-│       │   ├── l2s_eval.sh                  # Generic evaluation script → calls math_eval.py
-│       │   └── qwen_eval.sh                 # Wrapper (set params → calls l2s_eval.sh)
-│       ├── data/                            # Benchmarks (gsm8k, aime24, math500, minerva, etc.)
-│       └── outputs/                         # Results (Baselines, Mergenetic, etc.)
-│
-└── mergenetic/                              # Evolutionary merging framework directory
+│       │   ├── l2s_eval.sh                 # generic runner → calls math_eval.py
+│       │   └── qwen_eval.sh                # wrapper (sets params → calls l2s_eval.sh)
+│       ├── data/                           # gsm8k, aime24, math500, minerva, …
+│       └── outputs/                        # results (Baselines, Mergenetic, …)
+└── mergenetic/                             # evolutionary merging framework
     ├── README.md
     ├── requirements.txt
     ├── requirements_nb.txt
     ├── environment.yml
     ├── scripts/
-    │   ├── run_mergekit.py                  # MergeKit utility function
-    │   ├── mergenetic_gsm8k_TA.py           # end-to-end Task Arithmetic merge
-    │   └── mergenetic_gsm8k_TIES.py         # end-to-end TIES merge
-    ├── src/mergenetic/                      # Core library
-    │   ├── merging/
-    │   ├── optimization/
-    │   ├── evaluation/
-    │   ├── estimator/
-    │   ├── searcher/
-    │   └── utils.py
-    ├── models/                              # folder to store DeepSeek, Qwen, merged models
-    └── experiments/                         # Results of evolutionary runs (CSV logs, configs)
+    │   ├── run_mergekit.py                 # MergeKit utility
+    │   ├── mergenetic_gsm8k_TA.py          # Task Arithmetic end-to-end
+    │   └── mergenetic_gsm8k_TIES.py        # TIES end-to-end
+    ├── src/mergenetic/
+    │   ├── merging/ optimization/ evaluation/ estimator/ searcher/ utils.py
+    ├── models/                             # DeepSeek, Qwen, merged checkpoints
+    └── experiments/                        # logs & configs for evolutionary runs
 ```
 
 ---
@@ -62,26 +54,26 @@ There is **no single global requirements file**. Each component has its own envi
 
 
 ```bash
-# 🐍 Create and activate the virtual environment
+# 🐍 Create and activate the virtual environment (Python 3.11 required)
 python3.11 -m venv ~/mergenetic/.venv
 source ~/mergenetic/.venv/bin/activate
 
-# 📦 Install all required dependencies 
-
-## Install basic packages for notebooks:
-pip install jupyter ipykernel
+# 📦 Base packages for notebooks
 pip install --upgrade pip
+pip install jupyter ipykernel
 
-## dependencies for Mergenetic framework
+# 📦 Mergenetic framework
 cd mergenetic
 pip install -r requirements.txt
 pip install -e .
 
-## dependencies for Qwen2.5-Math evaluation framework
+# 📦 Qwen2.5-Math evaluation framework
 cd ../Qwen2.5-Math/evaluation
 pip install -r requirements.txt
-cd latex2sympy  
-pip install -e . 
+
+# 📦 latex2sympy (editable)
+cd latex2sympy
+pip install -e .
 ```
 
 ---
@@ -92,7 +84,7 @@ You can either run **scripts end-to-end** or follow the **notebooks** for step-b
 
 ### 1. Merging (Task Arithmetic / TIES)
 
-From `mergenetic/`: \
+From `mergenetic/`: 
 
 **Task Arithmetic (TA)**
 ```bash
