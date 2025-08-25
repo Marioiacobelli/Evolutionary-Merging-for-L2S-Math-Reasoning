@@ -15,10 +15,10 @@ to improve the trade-off between **accuracy** and **response length** in **Long-
 Evolutionary-Merging for L2S Math Reasoning
 |
 ├── project_notebook.ipynb                  # step-by-step merge + evaluation
-├── project_report.pdf                      # Report 
+├── project_report.pdf                      # Report
+├── README.md
 ├── images/                                 # figures for the report
 ├── Qwen2.5-Math/                           # evaluation framework
-│   ├── README.md
 │   └── evaluation/
 │       ├── math_eval.py                    # core evaluation
 │       ├── compute_NTR.py                  # negative transfer analysis
@@ -30,7 +30,6 @@ Evolutionary-Merging for L2S Math Reasoning
 │       ├── data/                           # gsm8k, aime24, math500, minerva, …
 │       └── outputs/                        # results (Baselines, Mergenetic, …)
 └── mergenetic/                             # evolutionary merging framework
-    ├── README.md
     ├── requirements.txt
     ├── requirements_nb.txt
     ├── environment.yml
