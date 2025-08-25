@@ -20,6 +20,7 @@ Evolutionary-Merging for L2S Math Reasoning
 ├── images/                                 # figures for the report
 ├── Qwen2.5-Math/                           # evaluation framework
 │   └── evaluation/
+|       ├── requirements.txt
 │       ├── math_eval.py                    # core evaluation
 │       ├── compute_NTR.py                  # negative transfer analysis
 │       ├── generate_score_tensors.py       # build 0/1 correctness tensors
@@ -31,8 +32,6 @@ Evolutionary-Merging for L2S Math Reasoning
 │       └── outputs/                        # results (Baselines, Mergenetic, …)
 └── mergenetic/                             # evolutionary merging framework
     ├── requirements.txt
-    ├── requirements_nb.txt
-    ├── environment.yml
     ├── scripts/
     │   ├── run_mergekit.py                 # MergeKit utility
     │   ├── mergenetic_gsm8k_TA.py          # Task Arithmetic end-to-end
