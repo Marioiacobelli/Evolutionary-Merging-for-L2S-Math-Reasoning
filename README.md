@@ -39,11 +39,11 @@ Evolutionary-Merging for L2S Math Reasoning
     │   └── mergenetic_gsm8k_TIES.py        # TIES end-to-end
     ├── src/mergenetic/
     │   ├── merging/
-    ├── optimization/
+    │   ├── optimization/
     │   ├── evaluation/
     │   ├── estimator/
     │   ├── searcher/
-    │   ├──  utils.py
+    │   └──utils.py
     ├── models/                             # DeepSeek, Qwen, merged checkpoints
     └── experiments/                        # logs & configs for evolutionary runs
 ```
