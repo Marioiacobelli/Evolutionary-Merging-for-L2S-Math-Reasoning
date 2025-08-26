@@ -18,33 +18,34 @@ Evolutionary-Merging for L2S Math Reasoning
 ├── project_report.pdf                      # Report
 ├── README.md
 ├── images/                                 # figures for the report
-├── Qwen2.5-Math/                           # evaluation framework
-│   └── evaluation/
-|       ├── requirements.txt
-│       ├── math_eval.py                    # core evaluation
-│       ├── compute_NTR.py                  # negative transfer analysis
-│       ├── generate_score_tensors.py       # build 0/1 correctness tensors
-│       ├── extract_result.py               # parse json/jsonl outputs
-│       ├── sh/
-│       │   ├── l2s_eval.sh                 # generic runner → calls math_eval.py
-│       │   └── qwen_eval.sh                # wrapper (sets params → calls l2s_eval.sh)
-│       ├── data/                           # gsm8k, aime24, math500, minerva, …
-│       └── outputs/                        # results (Baselines, Mergenetic, …)
-└── mergenetic/                             # evolutionary merging framework
-    ├── requirements.txt
-    ├── scripts/
-    │   ├── run_mergekit.py                 # MergeKit utility
-    │   ├── mergenetic_gsm8k_TA.py          # Task Arithmetic end-to-end
-    │   └── mergenetic_gsm8k_TIES.py        # TIES end-to-end
-    ├── src/mergenetic/
-    │   ├── merging/
-    │   ├── optimization/
-    │   ├── evaluation/
-    │   ├── estimator/
-    │   ├── searcher/
-    │   └──utils.py
-    ├── models/                             # DeepSeek, Qwen, merged checkpoints
-    └── experiments/                        # logs & configs for evolutionary runs
+├── mergenetic/                             # evolutionary merging framework
+|   ├── requirements.txt
+|   ├── scripts/
+|   │   ├── run_mergekit.py                 # MergeKit utility
+|   │   ├── mergenetic_gsm8k_TA.py          # Task Arithmetic end-to-end
+|   │   └── mergenetic_gsm8k_TIES.py        # TIES end-to-end
+|   ├── src/mergenetic/
+|   │   ├── merging/
+|   │   ├── optimization/
+|   │   ├── evaluation/
+|   │   ├── estimator/
+|   │   ├── searcher/
+|   │   └──utils.py
+|   ├── models/                             # DeepSeek, Qwen, merged checkpoints
+|   └── experiments/                        # logs & configs for evolutionary runs
+└── Qwen2.5-Math/                           # evaluation framework
+    └── evaluation/
+        ├── requirements.txt
+        ├── math_eval.py                    # core evaluation
+        ├── compute_NTR.py                  # negative transfer analysis
+        ├── generate_score_tensors.py       # build 0/1 correctness tensors
+        ├── extract_result.py               # parse json/jsonl outputs
+        ├── sh/
+        │   ├── l2s_eval.sh                 # generic runner → calls math_eval.py
+        │   └── qwen_eval.sh                # wrapper (sets params → calls l2s_eval.sh)
+        ├── data/                           # gsm8k, aime24, math500, minerva, …
+        └── outputs/                        # results (Baselines, Mergenetic, …)
+ 
 ```
 
 ---
